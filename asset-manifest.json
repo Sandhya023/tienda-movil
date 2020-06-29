@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/teinda-movil/static/css/main.9902a1e2.chunk.css",
+    "main.js": "/teinda-movil/static/js/main.19069bb2.chunk.js",
+    "main.js.map": "/teinda-movil/static/js/main.19069bb2.chunk.js.map",
+    "runtime-main.js": "/teinda-movil/static/js/runtime-main.e5e2e26f.js",
+    "runtime-main.js.map": "/teinda-movil/static/js/runtime-main.e5e2e26f.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/teinda-movil/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.6a5c6fdd.chunk.js": "/teinda-movil/static/js/2.6a5c6fdd.chunk.js",
+    "static/js/2.6a5c6fdd.chunk.js.map": "/teinda-movil/static/js/2.6a5c6fdd.chunk.js.map",
+    "index.html": "/teinda-movil/index.html",
+    "precache-manifest.43ac0c1e412e5bf09a506daa2084dcc4.js": "/teinda-movil/precache-manifest.43ac0c1e412e5bf09a506daa2084dcc4.js",
+    "service-worker.js": "/teinda-movil/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/teinda-movil/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.9902a1e2.chunk.css.map": "/teinda-movil/static/css/main.9902a1e2.chunk.css.map",
+    "static/js/2.6a5c6fdd.chunk.js.LICENSE.txt": "/teinda-movil/static/js/2.6a5c6fdd.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/teinda-movil/static/media/logo.9f7e506d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5e2e26f.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.6a5c6fdd.chunk.js",
+    "static/css/main.9902a1e2.chunk.css",
+    "static/js/main.19069bb2.chunk.js"
+  ]
+}
