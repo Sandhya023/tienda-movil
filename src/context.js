@@ -1,48 +1,52 @@
-import React, { Component } from 'react';
-import {storeProducts, detailProduct} from './data'; 
+import React, { Component } from "react";
+import { storeProducts, detailProduct } from "./data";
 const ProductContext = React.createContext();
-//provider
-//consumer
 
- class ProductProvider extends Component {
-     state = {
-         products:[],
-         detailProducts:detailProduct
-     }
-     componentDidMount() {
-         this.setProducts();
-     }
-     setProducts = () => {
-         let tempProducts = [];
-         storeProducts.forEach(item => {
-             const singleItem = {...item};
-             tempProducts = [...tempProducts,singleItem];
-         })
-         this.setState(() => {
-             return {products:tempProducts}
-         })
-     }
-     handleDetail = () => {
-         console.log("hello from detail");
-     }
-     addToCart = () => {
-        console.log("hello from add to cart");
-    }
+class ProductProvider extends Component {
+  state = {
+    products: [],
+    detailProduct: detailProduct,
+   
+  };
+  componentDidMount() {
+    this.setProducts();
+  }
+
+  setProducts = () => {
+    let products = [];
+    storeProducts.forEach(item => {
+      const singleItem = { ...item };
+      products = [...products, singleItem];
+    });
+    this.setState(() => {
+      return { products };
+    }, this.checkCartItems);
+  };
+
   
-    render(){
-        return (
-            <ProductContext.Provider value={{
-                ...this.state,
-                handleDetail:this.handleDetail,
-                addToCart:this.addToCart,
-            }}>
-               
-                {this.props.children}
-            </ProductContext.Provider>
-            
-        );
+  handleDetail = id => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { detailProduct: product };
+    });
+  };
+ 
+  render() {
+    return (
+      <ProductContext.Provider
+        value={{
+          ...this.state,
+          handleDetail: this.handleDetail,
+          addToCart: this.addToCart,
+          
+        }}
+      >
+        {this.props.children}
+      </ProductContext.Provider>
+    );
+  }
 }
-}
+
 const ProductConsumer = ProductContext.Consumer;
 
-export{ ProductProvider, ProductConsumer };
+export { ProductProvider, ProductConsumer };
